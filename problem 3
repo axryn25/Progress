@@ -1,0 +1,10 @@
+#The provided code stub reads an integer, , from STDIN. For all non-negative integers i<n , print i^2.
+
+#take user input
+n = int(input())
+
+for i in range(n):
+    if i < n:
+        print(i**2) #prints square of all the positive numbers less than n in each line.
+
+#learnings: the if command is unnecesary as the range command ensures i<n
