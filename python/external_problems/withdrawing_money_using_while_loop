@@ -1,0 +1,26 @@
+# A user has ₹10,000 in their account. Using a while loop, allow them to withdraw money
+# multiple times until their balance becomes 0 or they choose to stop. 
+# After each withdrawal, display the remaining balance.
+
+total = 10000
+a = int(input("enter the amount to be withdrawn(-1 to stop): "))
+while True:
+    if a == -1:
+        print("user abort")
+        break
+    #if the entered amount exceeds the total, we inform the user that they're broke
+    elif total < a:
+        print("not enough balance")
+        print("balance left : ",total)
+
+    #we use >= in the case of total == a so it can still be withdrawn
+    elif total >= a:                    
+        print("withdrawn: ",a)
+        total -= a
+        print("balance: ",total)
+    if total == 0:
+        print("you're broke")
+        break
+
+    a = int(input("enter the amount to be withdrawn(-1 to stop): "))
+
