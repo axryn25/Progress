@@ -1,0 +1,18 @@
+# A class has n students.
+#  Using a while loop, read each student’s attendance (present = 1, absent = 0). 
+# Count how many students are present and how many are absent. Hint: Loop until all students are entered
+
+n = int(input("enter the number of students: "))
+count_present = 0  #we initialize count
+count_absent = 0
+for i in range(1,n+1):
+    a = int(input(f"roll no. {i} (1 for present/0 for absent/-1 to abort): ")) #take the attendance for each student
+    if a == 1:
+        count_present += 1
+    elif a == 0:
+        count_absent += 1
+    elif a == -1:
+        break
+
+print("no. of people present : ",count_present)
+print("no. of people absent : ",count_absent)
