@@ -1,0 +1,14 @@
+# Keep reading test scores from the user until the user enters -1. Using a while loop, 
+# calculate and print the average score. Hint: Use -1 as a sentinel value to stop the loop
+a = int(input("enter test score: ")) #taking input
+total = 0 #initializing counts
+n = 0
+while True:
+    if a == -1: 
+        break
+    else:
+        n += 1
+        total += a #updating counts
+    a = int(input("enter test score: "))
+
+print("the average of the given scores is: ",total/n) #final average value
