@@ -1,0 +1,29 @@
+# Bus Ticket Booking A bus has 20 seats. 
+# Using a while loop, keep booking tickets (1 ticket per customer) until the bus is full. 
+# Print how many seats are left after each booking.
+
+Custom = 1
+tickets = 20     #we take 2 counters here
+
+while tickets != 0:
+    a = input(f"\nbook a ticket for coustomer{Custom}(y/n): ") 
+    if a == "y":
+        print("sucessfully booked!!!") 
+        tickets -= 1
+        Custom += 1             #we increase and decrease the customer and ticket counters respectively
+        print("left over tickets: ",tickets)
+    elif a == "n":
+        b = input("do you want to abort? (y/n): ")  #we give a chance to the user to abort the loop
+        if b == "y":
+            print("aborted. . .")
+            break
+        else:
+            print("\ncontinuing ticket booking process...")
+            Custom += 1             # if the customer dosent want a ticket, we move to the next customer
+            continue
+    else: 
+        print("continuing the process. . .")    #incase of other input, we ignore it and continue with the loop
+        continue
+    
+if tickets == 0:
+    print("\nthe tickets have been sold out, thankyou.")
