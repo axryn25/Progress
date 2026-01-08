@@ -1,0 +1,21 @@
+lst = []
+normal = [] #initializing lists
+while True:
+    a = int(input("enter marks (out of 60 and -1 to stop): ")) # taking input repeatedly until the user enters -1
+    if a == -1:     #to quit the program
+        break
+    elif a > 60:            #taking 60 as the max marks and ignoring values above 60
+        print("element can't exceed 60")
+        continue
+    elif a < 0:             #ignoring negative values
+        print("can't enter negative numbers.")
+        continue
+    else:
+        lst.append(a)   #appending marks to the first list 
+
+print("entered marks: ",lst)
+for i in lst:       #using a for loop to repeat the formula for every element
+    result = i/60 * 100
+    normal.append(round(result,2))  #appending it to another list
+
+print("normalized marks : ", normal) #printing the new list
