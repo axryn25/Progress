@@ -1,3 +1,7 @@
+#Given a list of students’ marks, normalize each mark so that the highest mark becomes 100 and others scale proportionally. Round results to 2 decimals.
+
+
+
 # A class has n students.
 #  Using a while loop, read each student’s attendance (present = 1, absent = 0). 
 # Count how many students are present and how many are absent. Hint: Loop until all students are entered
