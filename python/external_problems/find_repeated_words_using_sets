@@ -1,0 +1,10 @@
+# From a list of words, find all words that contain any repeated letters.
+# Input: words = ["apple", "bat", "balloon", "sky", "committee"] Output: ['apple', 'balloon', 'committee']
+words = ["apple", "bat", "balloon", "sky", "committee"]      #data as per the question
+last = []           #initialising the result list
+
+for i in words:         
+    if len(i) != len(set(i)):       #we compare the word length to the set length as sets can't have duplicate values. So if the word length is not equal to the set length,
+        last.append(i)              #we apprend the word into the resultant list
+    
+print(last) #finally printing the resultant list
