@@ -1,0 +1,11 @@
+# Given a string of employees and their departments separated by commas and colons,
+#  convert it into a list of lists.
+# data = "John:HR,Anita:IT,David:Finance,Meera:IT"    
+lst = []
+
+data = "John:HR,Anita:IT,David:Finance,Meera:IT"    #predefined data
+a = data.split(',')         #seperate the data at , 
+for i in a:
+    lst.append(i.split(":"))        #seperate the data at : and then add it to the list
+
+print(lst)      #print the list 
