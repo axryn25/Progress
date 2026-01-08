@@ -1,3 +1,6 @@
+#Given a list of students’ marks, normalize each mark so that the highest mark becomes 100 and others scale proportionally. Round results to 2 decimals.
+
+
 lst = []
 normal = [] #initializing lists
 while True:
