@@ -1,0 +1,16 @@
+matrix = [
+    [1, 2, 3], #horizontal == row
+    [4, 5, 6],  #vertical == column
+    [7, 8, 9]
+]
+
+transpose = []
+
+for i in range(len(matrix[0])):     #for each column
+    lst = []        #creates a list for each element in the column. In this case it creates 3 lists
+    for j in range(len(matrix)):    #for each row
+        lst.append(matrix[j][i])       #append the particular row and row elements into the individual lists (row = j, column = i)
+    
+    transpose.append(lst)       #we now add each list into the transpose list
+
+print(transpose)
