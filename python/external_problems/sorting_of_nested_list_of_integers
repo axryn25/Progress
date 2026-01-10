@@ -1,0 +1,21 @@
+# Given a nested list of integers, flatten it and sort in ascending order.
+# Input:nums = [[3, 1], [7, 4, 2], [9]] Output:[1, 2, 3, 4, 7, 9]
+
+nums = [            
+    [3, 1], 
+    [7, 4, 2], 
+    [9]
+    ]
+unsorted = []
+for i in nums:
+    for j in i:
+        unsorted.append(j)      #appending each element into a new list
+
+n = len(unsorted)       #initilizing n for buuble sort
+
+for one in range(n-1):          #using the bubble sort logic to sort the elements in ascending order
+    for two in range(n - 1 - one):
+        if unsorted[two] > unsorted[two+ 1]:
+            unsorted[two],unsorted[two+1] = unsorted[two+1],unsorted[two]
+        
+print(unsorted)
