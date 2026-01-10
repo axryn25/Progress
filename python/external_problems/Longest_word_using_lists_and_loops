@@ -1,0 +1,11 @@
+sentences = ["I love programming", "Python is powerful", "Data science rocks"]
+
+
+long = ""           #initilizing externa string
+for i in (sentences):       
+    words = i.split()       #splitting the sentence into words
+    for j in words:         
+        if len(j) > len(long):      #if the word is longer than the initilized string, replace the string with that word
+            long = j
+        
+print(long)
